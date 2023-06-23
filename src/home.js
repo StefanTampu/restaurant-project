@@ -23,7 +23,7 @@ const homePage = () => {
     refOne.title = "shakespeare icons";
     refOne.textContent = "Shakespeare icon created by Flat Icons - Flaticon";
     const footerLineTwo = document.createElement("p");
-    footerLineTwo.innerHTML = "Photo of Shakespeare's birthplace by <a href='https://unsplash.com/@phoenix_2022?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Swati Kedia</a> on <a href='https://unsplash.com/photos/LtEf3pAUNDo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>";
+    footerLineTwo.innerHTML = "Photo of Shakespeare's birthplace by <a href='https://unsplash.com/@phoenix_2022?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText' target='_blank'>Swati Kedia</a> on <a href='https://unsplash.com/photos/LtEf3pAUNDo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText' target='_blank'>Unsplash</a>";
     footer.append(refOne, footerLineTwo);
 
     document.body.append(main, footer);

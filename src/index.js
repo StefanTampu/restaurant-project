@@ -4,12 +4,13 @@ import Logo from "../resources/shakespeare.png";
 import IndexBackground from "../resources/index-background.jpg"
 import { homePage } from "./home";
 import { aboutPage } from "./about";
+import { clearPage } from "./reset";
 
 const header = document.createElement("header");
 const main = document.createElement("main");
 const footer = document.createElement("footer");
 
-const headerFunction = () => {
+const headerFunction = (() => {
     const logoContainer = document.createElement("div");
     logoContainer.classList.add("logo-container");
     const logoImg = new Image();
@@ -35,10 +36,32 @@ const headerFunction = () => {
 
     header.append(logoContainer, nav);
 
-    return header;
-}
+    return{ 
+        header,
+        logoContainer,
+        navAbout,
+        navMenu,
+        navContact
+    };
+})
 
-document.body.appendChild(headerFunction());
-aboutPage();
+let result = headerFunction();
+
+document.body.appendChild(result.header);
+homePage();
+
+const choosePage = () => {
+    console.log("hello");
+    result.logoContainer.onclick = () => {
+        clearPage();
+        homePage();
+    }
+    result.navAbout.onclick = () => {
+        clearPage();
+        aboutPage();
+    }
+};
+
+choosePage();
 
 export { main, footer };

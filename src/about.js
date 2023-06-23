@@ -36,7 +36,18 @@ const aboutPage = () => {
     }
 
     main.append(aboutContainer, imageContainer);
-    document.body.appendChild(main);
+
+    const refOne = document.createElement("a");
+    refOne.href = "https://www.flaticon.com/free-icons/shakespeare";
+    refOne.title = "shakespeare icons";
+    refOne.textContent = "Shakespeare icon created by Flat Icons - Flaticon";
+    const footerLineTwo = document.createElement("p");
+    footerLineTwo.innerHTML = "Photo by <a href='https://unsplash.com/@birminghammuseumstrust?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText' target='_blank'>Birmingham Museums Trust</a> on <a href='https://unsplash.com/photos/BPWZ01FtySg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText' target='_blank'>Unsplash</a>";
+    footer.append(refOne, footerLineTwo);
+
+    document.body.append(main, footer);
+
+    return document.body;
 }
 
 export { aboutPage };
