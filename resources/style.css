@@ -186,6 +186,13 @@ footer a {
 
 /*Menu Page*/
 
+#menu-body {
+    background: url("./menu-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 #menu-main {
     display: flex;
     justify-content: center;

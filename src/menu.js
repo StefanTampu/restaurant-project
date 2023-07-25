@@ -47,10 +47,6 @@ const menuPage = () => {
     foodSection.setAttribute("id", "food-section");
     const mainFoodsContent = document.createElement("div");
     mainFoodsContent.setAttribute("id", "main-foods-content");
-    const desertFoodsContent = document.createElement("div");
-    desertFoodsContent.setAttribute("id", "desert-foods-content");
-    const drinksContent = document.createElement("div");
-    drinksContent.setAttribute("id", "drinks-content");
 
     const soup = document.createElement("div");
     const soupTitle = document.createElement("h3");
@@ -96,7 +92,17 @@ const menuPage = () => {
     mainFoodsContent.append(soup, poultry, meats, seafoods, vegetarian);
     foodSection.appendChild(mainFoodsContent);
 
-    
+    const desertFoodsContent = document.createElement("div");
+    desertFoodsContent.setAttribute("id", "desert-foods-content");
+    desertFoodsContent.appendChild(foodFactory("Prune Tarts", 8, "3 tarts made with paste of prunes marinated in red wine overnight"))
+    desertFoodsContent.appendChild(foodFactory("Damson Conserve", 8, "delicious conserve made with prunes, rosewater and white wine, served with biscuits"))
+
+    const drinksContent = document.createElement("div");
+    drinksContent.setAttribute("id", "drinks-content");
+    drinksContent.appendChild(foodFactory("Water", 1, "Drink at your own peril!"));
+    drinksContent.appendChild(foodFactory("Water", 4, "Non-alcoholic"));
+    drinksContent.appendChild(foodFactory("Ale", 6, "Alcoholic"));
+    drinksContent.appendChild(foodFactory("Wine", 9, "Locally-made red or white wine"));
 
     mainFoods.addEventListener("click", () => {
         console.log("hello");
@@ -116,6 +122,14 @@ const menuPage = () => {
 
     menuContainer.append(menuTitle, foodTypesList, foodSection);
     main.appendChild(menuContainer);
+
+    const refOne = document.createElement("a");
+    refOne.href = "https://www.flaticon.com/free-icons/shakespeare";
+    refOne.title = "shakespeare icons";
+    refOne.textContent = "Shakespeare icon created by Flat Icons - Flaticon";
+    const footerLineTwo = document.createElement("p");
+    footerLineTwo.innerHTML = "Photo by <a href='https://unsplash.com/@lauraadaiphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>laura adai</a> on <a href='https://unsplash.com/photos/q0GUMkYUmds?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>";
+    footer.append(refOne, footerLineTwo);
 
     document.body.append(main, footer);
 
