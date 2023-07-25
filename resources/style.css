@@ -194,6 +194,8 @@ footer a {
 
 #menu-main .main-container {
     justify-content: start;
+    width: fit-content;
+    transition: 2s;
 }
 
 #food-types-list {
@@ -210,17 +212,49 @@ footer a {
 }
 
 #food-section {
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #main-foods-content {
-    width: 100%;
+    min-width: 100%;
     display: grid;
-    grid-template: 1fr 1fr / repeat(3, 160px);
+    grid-template: 1fr 1fr / repeat(3, 240px);
+    column-gap: 24px;
     grid-auto-flow: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     text-align: center;
+}
+
+.food-item {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 1px solid hsla(60, 100%, 89%, 0.8);
+}
+
+.item-head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h4 {
+    font-family: Hamlet;
+}
+
+.item-price {
+    text-align: right;
+    font-weight: 600;
+}
+
+.item-description {
+    font-style: italic;
+    text-align: justify;
 }
