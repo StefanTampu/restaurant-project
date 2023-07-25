@@ -4,6 +4,7 @@ import Logo from "../resources/shakespeare.png";
 import IndexBackground from "../resources/index-background.jpg"
 import { homePage } from "./home";
 import { aboutPage } from "./about";
+import { menuPage } from "./menu";
 import { clearPage } from "./reset";
 
 const header = document.createElement("header");
@@ -60,6 +61,11 @@ const choosePage = () => {
         clearPage();
         aboutPage();
     }
+    result.navMenu.onclick = () => {
+        clearPage();
+        menuPage();
+    }
+
 };
 
 choosePage();

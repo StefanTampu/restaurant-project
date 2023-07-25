@@ -183,3 +183,44 @@ footer a {
 #ysBook {
     height: 65vh;
 }
+
+/*Menu Page*/
+
+#menu-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-main .main-container {
+    justify-content: start;
+}
+
+#food-types-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    gap: 48px;
+    font-family: Hamlet;
+}
+
+.main-foods-title {
+    font-family: Hamlet;
+}
+
+#food-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-foods-content {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr 1fr / repeat(3, 160px);
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
