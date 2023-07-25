@@ -6,6 +6,7 @@ import { homePage } from "./home";
 import { aboutPage } from "./about";
 import { menuPage } from "./menu";
 import { clearPage } from "./reset";
+import { contactPage } from "./contact";
 
 const header = document.createElement("header");
 const main = document.createElement("main");
@@ -52,7 +53,6 @@ document.body.appendChild(result.header);
 homePage();
 
 const choosePage = () => {
-    console.log("hello");
     result.logoContainer.onclick = () => {
         clearPage();
         homePage();
@@ -64,6 +64,10 @@ const choosePage = () => {
     result.navMenu.onclick = () => {
         clearPage();
         menuPage();
+    }
+    result.navContact.onclick = () => {
+        clearPage();
+        contactPage();
     }
 
 };

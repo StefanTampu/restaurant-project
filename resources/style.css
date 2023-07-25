@@ -265,3 +265,32 @@ h4 {
     font-style: italic;
     text-align: justify;
 }
+
+/*Contact Page*/
+
+#contact-body {
+    background: url("./contact-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#contact-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-description h3 {
+    font-size: inherit;
+    display: inline;
+}
+
+#contact-description a {
+    text-decoration: none;
+    transition: 500ms;
+}
+
+#contact-description a:hover {
+    color: hsl(240, 100%, 50%);
+}
